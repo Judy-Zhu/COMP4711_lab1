@@ -1,2 +1,3 @@
 # COMP4711_lab1
 COMP4711 lab1
+Use NetBean IDE 8.2
