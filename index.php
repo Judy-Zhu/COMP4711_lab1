@@ -13,9 +13,6 @@ and open the template in the editor.
         <?php
         include('Student.php');
         
-        #echo "I'm so excited to learn how to develop webapps in COMP4711!<br>";
-        #echo 'Woohoo!';
-        
         $students = array();
         
         # first student information
@@ -40,7 +37,19 @@ and open the template in the editor.
         $second->add_grade(80);
         $second->add_grade(50);
         $students['a456'] = $second;
+ 
+        # third student information : me
+        $third = new Student();
+        $third->surname = "Zhu";
+        $third->first_name = "Dan (Judy)";
+        $third->add_email('home','zhudan.eleven@gmail.com');
+        $third->add_email('work','dzhu16@my.bcit.ca');
+        $third->add_grade(90);
+        $third->add_grade(60);
+        $third->add_grade(60);
+        $students['m789'] = $third;
         
+        ksort($students); // one of the many sort functions
 
         foreach($students as $student)
             echo $student->toString();
